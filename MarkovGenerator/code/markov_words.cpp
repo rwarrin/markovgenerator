@@ -192,7 +192,7 @@ main(s32 ArgCount, char **Args)
 
     QuickSort(NGrams, 0, NGramCount - 1, NGramSize);
 
-#if 1
+#if 0
     for(u32 Index = 0; Index < NGramCount - 2; ++Index)
     {
         Assert(StringNWordCompare(NGrams[Index], NGrams[Index + 1], NGramSize) <= 0);
@@ -251,7 +251,7 @@ main(s32 ArgCount, char **Args)
             }
         }
 
-        if(*NextGram == 0)
+        if(!NextGram || *NextGram == 0)
         {
             break;
         }
